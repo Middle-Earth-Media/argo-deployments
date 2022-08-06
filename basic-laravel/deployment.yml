@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: basic-laravel-deployment
+  labels:
+    app: basic-laravel
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: basic-laravel
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: basic-laravel
+    spec:
+      containers:
+        - name: basic-laravel
+          image: middleearthmedia/basiclaravel
+          ports:
+            - containerPort: 80
