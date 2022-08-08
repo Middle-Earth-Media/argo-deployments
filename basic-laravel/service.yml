@@ -10,4 +10,4 @@ spec:
     app: basic-laravel
   ports:
     - name: http
-      port: 80
+      port: 8080
